@@ -1,0 +1,134 @@
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes {
+    width: 90%;
+    height: 50%;
+    display: block;
+    position: absolute;
+    left: -50%;
+    animation: box1 3s linear;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count:1; */
+}
+
+.box1,
+.box2,
+.box3 {
+    width: calc(80%/3);
+    box-sizing: border-box;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    padding: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.box1 {
+    background-color: #CE5A67;
+    z-index: -1;
+}
+
+.box2 {
+    background-color: #c0e966;
+    padding: 2em;
+    animation: box2 3s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    z-index: -2;
+
+}
+
+.box3 {
+    background-color: #9575DE;
+    padding: 2em;
+    animation: box3 3s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    z-index: -3;
+}
+
+
+.box {
+    padding: 1em;
+    line-height: 100%;
+    box-sizing: border-box;
+    background-color: beige;
+    box-shadow: 0 0.125rem 0.25rem rgba(244, 244, 244, 0.484) !important;
+    border-radius: 0.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10823849;
+    animation: box 3s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+}
+
+.boxes :is(.box) {
+    color: #505050;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@keyframes box1 {
+    from {
+        left: -50%;
+    }
+
+    to {
+        left: 10%;
+    }
+}
+
+
+
+@keyframes box2 {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: 30%;
+      
+    }
+}
+
+@keyframes box3 {
+    from {
+        left: 30%;
+    }
+
+    to {
+        left: 60%;
+    }
+}
+
+
+@keyframes box {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
